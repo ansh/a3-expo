@@ -4,7 +4,7 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 
 ## Technologies used
 - Expo v49
-- React Navigation v6 (I'm looking to switch this to `expo-router` @evanbacon)
+- React Navigation v6 (I'm looking to switch this to `expo-router` by @evanbacon when auth flows are made more stable)
 - Reanimated v3
 - React Native Gesture Handler v4
 - Firebase JS v9
@@ -13,8 +13,8 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 
 ## Features
 ### Important
-- [ ] Tabs
-- [ ] Code organized by feature with a root Navigator
+- [x] Tabs
+- [x] Typed Root Navigator
 - [ ] Styling primitives
   - [ ] Dark + Light mode
   - [ ] `createStyles` to create styles with theme
