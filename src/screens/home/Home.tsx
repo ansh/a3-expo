@@ -1,9 +1,8 @@
 import { StyleSheet, Text, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { TabStackParamList } from "../../navigation/types";
-import Ionicons from "@expo/vector-icons/Ionicons";
+import { HomeTabParamList, RootStackParamList, TabStackParamList } from "../../navigation/types";
 
-type Props = NativeStackScreenProps<TabStackParamList, "Home">;
+type Props = NativeStackScreenProps<HomeTabParamList, "Home">;
 const Home = ({}: Props) => {
   return (
     <View>
@@ -12,19 +11,6 @@ const Home = ({}: Props) => {
   );
 };
 export default Home;
-
-export const HomeHeaderRight = (props: {
-  tintColor?: string;
-  pressColor?: string;
-  pressOpacity?: number;
-  labelVisible?: boolean;
-}) => {
-  return (
-    <View>
-      <Ionicons name="settings" size={24} color="black" style={styles.headerRightIcon} />
-    </View>
-  );
-};
 
 const styles = StyleSheet.create({
   headerRightIcon: {
