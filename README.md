@@ -4,7 +4,7 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 
 ## Technologies used
 - Expo v49
-- React Navigation v6 (I'm looking to switch this to `expo-router` by @evanbacon when auth flows are made more stable)
+- React Navigation v6 (I'm looking to switch this to `expo-router` by @evanbacon when auth flows are made more stable and customizable)
 - Reanimated v3
 - React Native Gesture Handler v4
 - Firebase JS v9
@@ -46,3 +46,10 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 - [ ] Auto-organize imports by type
 - [ ] Prettier + ESLint setup
 
+
+## Getting started
+
+### Firebase setup
+1. Create a Firebase project
+2. Create a web app
+3. Download a config file and copy the contents into `.env`
