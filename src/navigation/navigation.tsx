@@ -74,7 +74,7 @@ const ProfileTabNavigation = () => {
         name="Profile"
         component={Profile}
         options={{
-          headerRight: ProfileHeaderRight,
+          headerRight: (props) => <ProfileHeaderRight {...props} />,
           headerLargeTitle: true,
         }}
       />

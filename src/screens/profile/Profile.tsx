@@ -29,7 +29,12 @@ export const ProfileHeaderRight = (props: {
           navigation.navigate("Settings");
         }}
       >
-        <Ionicons name="settings" size={24} color="black" style={[styles.headerRightIcon]} />
+        <Ionicons
+          name="settings"
+          size={24}
+          color="black"
+          style={[styles.headerRightIcon, { opacity: props.pressOpacity }]}
+        />
       </Pressable>
     </View>
   );
