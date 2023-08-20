@@ -1,4 +1,4 @@
-import { NavigationContainer } from "@react-navigation/native";
+import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
@@ -7,9 +7,10 @@ import {
   RootStackParamList,
   TabStackParamList,
 } from "./types";
-import Home from "../screens/home/Home";
+import Home, { HomeHeaderRight } from "../screens/home/Home";
 import Profile, { ProfileHeaderRight } from "../screens/profile/Profile";
 import Settings from "../screens/settings/Settings";
+import { useColorScheme } from "../config/styles/colorScheme";
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const TabsStack = createBottomTabNavigator<TabStackParamList>();
@@ -17,8 +18,10 @@ const HomeTabStack = createNativeStackNavigator<HomeTabParamList>();
 const ProfileTabStack = createNativeStackNavigator<ProfileTabParamList>();
 
 const Navigation = () => {
+  const scheme = useColorScheme();
+
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={scheme === "dark" ? DarkTheme : DefaultTheme}>
       <RootNavigation />
     </NavigationContainer>
   );
@@ -60,6 +63,7 @@ const HomeTabNavigation = () => {
         name="Home"
         component={Home}
         options={{
+          headerRight: (props) => <HomeHeaderRight {...props} />,
           headerLargeTitle: true,
         }}
       />

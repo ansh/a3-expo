@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { StyleSheet } from "react-native";
 import { EdgeInsets, useSafeAreaInsets } from "react-native-safe-area-context";
-import useColorScheme from "./useColorScheme";
+import { useColorScheme } from "./colorScheme";
 import colors from "./colors";
 import fonts from "./fonts";
 import layout from "./layout";

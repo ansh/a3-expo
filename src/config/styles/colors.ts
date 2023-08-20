@@ -19,6 +19,7 @@ const sharedColors = {
 export default {
   light: {
     text: "#000",
+    icon: "#000",
     lightText: "#333",
     background: "#fff",
     activeText: "#fff",
@@ -27,6 +28,7 @@ export default {
   },
   dark: {
     text: "#fff",
+    icon: "#fff",
     lightText: "#aaa",
     background: "#000",
     activeText: "#9D9D9D",

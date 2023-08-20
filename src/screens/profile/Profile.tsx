@@ -3,6 +3,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { ProfileTabParamList } from "../../navigation/types";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { createUseStyles } from "../../config/styles/createUseStyles";
 
 type Props = NativeStackScreenProps<ProfileTabParamList, "Profile">;
 const Profile = ({}: Props) => {
@@ -21,10 +22,11 @@ export const ProfileHeaderRight = (props: {
   labelVisible?: boolean;
 }) => {
   const navigation = useNavigation<NavigationProp<ProfileTabParamList>>();
+  const { styles, palette } = useStyles();
   return (
     <View>
       <Pressable
-        style={{ opacity: props.pressOpacity }}
+        style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
         onPress={() => {
           navigation.navigate("Settings");
         }}
@@ -32,7 +34,7 @@ export const ProfileHeaderRight = (props: {
         <Ionicons
           name="settings"
           size={24}
-          color="black"
+          color={palette.icon}
           style={[styles.headerRightIcon, { opacity: props.pressOpacity }]}
         />
       </Pressable>
@@ -40,8 +42,8 @@ export const ProfileHeaderRight = (props: {
   );
 };
 
-const styles = StyleSheet.create({
+const useStyles = createUseStyles(() => ({
   headerRightIcon: {
     marginRight: 10,
   },
-});
+}));

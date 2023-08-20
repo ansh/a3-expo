@@ -1,6 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { HomeTabParamList, RootStackParamList, TabStackParamList } from "../../navigation/types";
+import { HomeTabParamList } from "../../navigation/types";
+import { createUseStyles } from "../../config/styles/createUseStyles";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import {
+  useColorScheme,
+  useToggleColorScheme,
+  useWithColorScheme,
+} from "../../config/styles/colorScheme";
 
 type Props = NativeStackScreenProps<HomeTabParamList, "Home">;
 const Home = ({}: Props) => {
@@ -12,8 +19,37 @@ const Home = ({}: Props) => {
 };
 export default Home;
 
-const styles = StyleSheet.create({
+export const HomeHeaderRight = (props: {
+  tintColor?: string;
+  pressColor?: string;
+  pressOpacity?: number;
+  labelVisible?: boolean;
+}) => {
+  const { styles, palette } = useStyles();
+  const toggleColorScheme = useToggleColorScheme();
+  const iconName = useWithColorScheme("moon-sharp", "sunny-sharp");
+
+  return (
+    <View>
+      <Pressable
+        style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
+        onPress={() => {
+          toggleColorScheme();
+        }}
+      >
+        <Ionicons
+          name={iconName}
+          size={24}
+          color={palette.icon}
+          style={[styles.headerRightIcon, { opacity: props.pressOpacity }]}
+        />
+      </Pressable>
+    </View>
+  );
+};
+
+const useStyles = createUseStyles(() => ({
   headerRightIcon: {
     marginRight: 10,
   },
-});
+}));
