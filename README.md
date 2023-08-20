@@ -15,12 +15,12 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 ### Important
 - [x] Tabs
 - [x] Typed Root Navigator
-- [ ] Styling primitives
-  - [ ] Dark + Light mode
+- [x] Styling primitives
+  - [x] Dark + Light mode
   - [x] `createUseStyles` to create styles with theme
     - [x] Color primitives with Radix UI colors built-in
-    - [ ] Font primitives with SF Pro font built-in
-    - [ ] Layout primitives
+    - [x] Font primitives with SF Pro font built-in
+    - [x] Layout primitives
 - [ ] Firebase Auth
   - [ ] Phone Auth with country picker and detection
   - [ ] Google OAuth on iOS + Android
