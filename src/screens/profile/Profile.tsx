@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { Pressable, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { ProfileTabParamList } from "../../navigation/types";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { createUseStyles } from "../../config/styles/createUseStyles";
+import { Text } from "../../components/base";
 
 type Props = NativeStackScreenProps<ProfileTabParamList, "Profile">;
 const Profile = ({}: Props) => {

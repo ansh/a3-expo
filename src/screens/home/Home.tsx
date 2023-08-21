@@ -1,13 +1,10 @@
-import { Pressable, Text, View } from "react-native";
+import { Pressable, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { HomeTabParamList } from "../../navigation/types";
 import { createUseStyles } from "../../config/styles/createUseStyles";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import {
-  useColorScheme,
-  useToggleColorScheme,
-  useWithColorScheme,
-} from "../../config/styles/colorScheme";
+import { useToggleColorScheme, useWithColorScheme } from "../../config/styles/colorScheme";
+import { Text } from "../../components/base";
 
 type Props = NativeStackScreenProps<HomeTabParamList, "Home">;
 const Home = ({}: Props) => {

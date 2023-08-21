@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { ProfileTabParamList } from "../../navigation/types";
+import { Text } from "../../components/base";
 
-type Props = NativeStackScreenProps<RootStackParamList, "Settings">;
+type Props = NativeStackScreenProps<ProfileTabParamList, "Settings">;
 const Settings = ({}: Props) => {
   return (
     <View>
