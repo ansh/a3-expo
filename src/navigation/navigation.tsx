@@ -2,6 +2,7 @@ import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
+  AuthStackParamList,
   HomeTabParamList,
   ProfileTabParamList,
   RootStackParamList,
@@ -11,27 +12,51 @@ import Home, { HomeHeaderRight } from "../screens/home/Home";
 import Profile, { ProfileHeaderRight } from "../screens/profile/Profile";
 import Settings from "../screens/settings/Settings";
 import { useColorScheme } from "../config/styles/colorScheme";
+import SignIn from "../screens/auth/SignIn";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
+const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 const TabsStack = createBottomTabNavigator<TabStackParamList>();
 const HomeTabStack = createNativeStackNavigator<HomeTabParamList>();
 const ProfileTabStack = createNativeStackNavigator<ProfileTabParamList>();
 
 const Navigation = () => {
   const scheme = useColorScheme();
+  const user = false;
 
   return (
     <NavigationContainer theme={scheme === "dark" ? DarkTheme : DefaultTheme}>
-      <RootNavigation />
+      {user ? <RootNavigation /> : <AuthNavigation />}
     </NavigationContainer>
   );
 };
 
 const RootNavigation = () => {
   return (
-    <RootStack.Navigator>
-      <RootStack.Screen name="Tabs" component={TabNavgiation} options={{ headerShown: false }} />
-    </RootStack.Navigator>
+    <SafeAreaProvider>
+      <RootStack.Navigator>
+        <RootStack.Screen
+          name="Tabs"
+          component={TabNavgiation}
+          options={{
+            headerShown: false,
+          }}
+        />
+      </RootStack.Navigator>
+    </SafeAreaProvider>
+  );
+};
+
+const AuthNavigation = () => {
+  return (
+    <AuthStack.Navigator>
+      <AuthStack.Screen
+        name="SignIn"
+        component={SignIn}
+        options={{ headerLargeTitleShadowVisible: true, headerLargeTitle: true }}
+      />
+    </AuthStack.Navigator>
   );
 };
 

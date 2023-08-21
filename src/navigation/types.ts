@@ -4,6 +4,10 @@ export type RootStackParamList = {
   NotFound: undefined;
 };
 
+export type AuthStackParamList = {
+  SignIn: undefined;
+};
+
 export type TabStackParamList = {
   HomeTab: undefined;
   ProfileTab: undefined;
