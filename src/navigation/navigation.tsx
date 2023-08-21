@@ -54,7 +54,7 @@ const AuthNavigation = () => {
       <AuthStack.Screen
         name="SignIn"
         component={SignIn}
-        options={{ headerLargeTitleShadowVisible: true, headerLargeTitle: true }}
+        options={{ headerLargeTitle: true, title: "Welcome!", headerTransparent: true }}
       />
     </AuthStack.Navigator>
   );

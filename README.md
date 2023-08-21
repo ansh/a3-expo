@@ -13,13 +13,14 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 
 ## Features
 ### Important
+- [x] Runs on Expo Go
 - [x] Tabs
 - [x] Typed Root Navigator
 - [x] Styling primitives
   - [x] Dark + Light mode
-  - [x] `createUseStyles` to create styles with theme
+  - [x] `createUseStyles` to create styles with theme, colors, layout, and typography primitives
     - [x] Color primitives with Radix UI colors built-in
-    - [x] Font primitives with SF Pro font built-in
+    - [x] Font primitives with a styled `Text` component
     - [x] Layout primitives
 - [ ] Firebase Auth
   - [ ] Phone Auth with country picker and detection
@@ -42,7 +43,6 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 - [ ] OTA update handler with EAS
 - [ ] E2E tests with Maestro
 - [ ] Simple `<Provider />` flow to easily add or remove features
-- [ ] Runs on Expo Go
 - [ ] Auto-organize imports by type
 - [ ] Prettier + ESLint setup
 
