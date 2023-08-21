@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { AuthStackParamList, HomeTabParamList } from "../../navigation/types";
 import { createUseStyles } from "../../config/styles/createUseStyles";
@@ -9,9 +9,9 @@ const SignIn = ({}: Props) => {
   const { styles } = useStyles();
 
   return (
-    <View>
+    <ScrollView contentInsetAdjustmentBehavior="automatic">
       <Text>Sign in</Text>
-    </View>
+    </ScrollView>
   );
 };
 export default SignIn;

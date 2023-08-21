@@ -13,7 +13,7 @@ import Profile, { ProfileHeaderRight } from "../screens/profile/Profile";
 import Settings from "../screens/settings/Settings";
 import { useColorScheme } from "../config/styles/colorScheme";
 import SignIn from "../screens/auth/SignIn";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();

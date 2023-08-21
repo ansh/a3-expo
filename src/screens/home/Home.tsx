@@ -1,4 +1,4 @@
-import { Pressable, View } from "react-native";
+import { Pressable, ScrollView, View } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { HomeTabParamList } from "../../navigation/types";
 import { createUseStyles } from "../../config/styles/createUseStyles";
@@ -9,9 +9,9 @@ import { Text } from "../../components/base";
 type Props = NativeStackScreenProps<HomeTabParamList, "Home">;
 const Home = ({}: Props) => {
   return (
-    <View>
+    <ScrollView contentInsetAdjustmentBehavior="automatic">
       <Text>Home</Text>
-    </View>
+    </ScrollView>
   );
 };
 export default Home;

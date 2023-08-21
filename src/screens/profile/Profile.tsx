@@ -1,4 +1,4 @@
-import { Pressable, View } from "react-native";
+import { Pressable, View, ScrollView } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { ProfileTabParamList } from "../../navigation/types";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
@@ -9,9 +9,9 @@ import { Text } from "../../components/base";
 type Props = NativeStackScreenProps<ProfileTabParamList, "Profile">;
 const Profile = ({}: Props) => {
   return (
-    <View>
+    <ScrollView contentInsetAdjustmentBehavior="automatic">
       <Text>Profile</Text>
-    </View>
+    </ScrollView>
   );
 };
 export default Profile;
