@@ -27,24 +27,30 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
   - [ ] Google OAuth on iOS + Android
   - [ ] Apple OAuth on iOS
 - [ ] Error handling with React Error Boundary
-- [ ] Minimal global state management built with Mobx
+- [x] Prettier setup
 
 
 ### Optional
+- [ ] Minimal global state management built with Mobx
 - [ ] Aliased imports
 - [ ] Built-in components
   - [ ] Instagram Discover and Netflix style page open animation
-  - [ ] Minimal bottom sheet built on top of React Navigation
-  - [ ] Native dropdowns
-  - [ ] Native toasts
-  - [ ] Long list with `FlashList`
-  - [ ] Simple `Box` component that is an opinionated `View`
+  - [ ] Minimal bottom sheet built on top of React Navigation modal
+  - [ ] Dropdown component (with https://github.com/enesozturk/react-native-hold-menu)
+  - [ ] Native toasts component (with https://github.com/backpackapp-io/react-native-toast or https://github.com/calintamas/react-native-toast-message)
+  - [ ] Long list with `FlashList` (https://docs.expo.dev/versions/latest/sdk/flash-list/)
+  - [ ] Simple animations with https://github.com/nandorojo/moti
+  - [ ] Simple `Button` component that is an opinionated `Pressable`
+  - [ ] Simple `Box` component that is an opinionated `View` (like )
   - [ ] Simple `Text` component that is a slightly more opinionated version of `Text` from react-native
+- [ ] Simple `<Provider />` flow to easily add or remove features
+- [ ] ESLint setup
+  - [ ] Auto-organize imports by type via ESLint plugin
+
+Cannot be included in the Expo Go version:
 - [ ] OTA update handler with EAS
 - [ ] E2E tests with Maestro
-- [ ] Simple `<Provider />` flow to easily add or remove features
-- [ ] Auto-organize imports by type
-- [ ] Prettier + ESLint setup
+
 
 
 ## Getting started
@@ -53,3 +59,12 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 1. Create a Firebase project
 2. Create a web app
 3. Download a config file and copy the contents into `.env`
+
+#### Sign-in with Apple
+We will be followithing [this guide](https://docs.expo.dev/versions/latest/sdk/apple-authentication/)
+1. Enable Sign-in with Apple in Firebase
+2. Create an Apple Developer account
+3. Make sure you have a `scheme` in `app.json` and follow the setup for the `expo-apple-authentication` package
+4. If using Expo Go, use the `host.exp.Exponent` bundle identifier in Firebase in the Services ID field
+5. If using a standalone app, use the bundle identifier in the `scheme` field in Firebase in the Services ID field
+6. For development, you will be fine, but when publishing the app you need to enable the `Sign in with Apple` capability in Apple Developer website

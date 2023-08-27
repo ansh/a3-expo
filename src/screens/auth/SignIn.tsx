@@ -2,7 +2,7 @@ import { ScrollView } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { AuthStackParamList, HomeTabParamList } from "../../navigation/types";
 import { createUseStyles } from "../../config/styles/createUseStyles";
-import { Text } from "../../components/base";
+import { SignInWithAppleButton } from "../../lib/auth/apple";
 
 type Props = NativeStackScreenProps<AuthStackParamList, "SignIn">;
 const SignIn = ({}: Props) => {
@@ -10,7 +10,7 @@ const SignIn = ({}: Props) => {
 
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic">
-      <Text>Sign in</Text>
+      <SignInWithAppleButton />
     </ScrollView>
   );
 };
