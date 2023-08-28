@@ -6,10 +6,10 @@ interface Props extends PressableProps {
   touchOpacity?: number;
 }
 
-const PressableOpacity: React.FC<Props> = ({
+export const PressableOpacity: React.FC<Props> = ({
   style,
   android_ripple = { color: "lightgrey" },
-  touchOpacity = 0.4,
+  touchOpacity = 0.5,
   children,
   ...otherProps
 }) => {
@@ -23,5 +23,3 @@ const PressableOpacity: React.FC<Props> = ({
     </DefaultPressable>
   );
 };
-
-export default PressableOpacity;
