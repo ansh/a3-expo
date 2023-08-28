@@ -14,6 +14,7 @@ import Settings from "../screens/settings/Settings";
 import { useColorScheme } from "../config/styles/colorScheme";
 import SignIn from "../screens/auth/SignIn";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { useAuth } from "../lib/auth/AuthProvider";
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -23,7 +24,7 @@ const ProfileTabStack = createNativeStackNavigator<ProfileTabParamList>();
 
 const Navigation = () => {
   const scheme = useColorScheme();
-  const user = false;
+  const { user } = useAuth();
 
   return (
     <NavigationContainer theme={scheme === "dark" ? DarkTheme : DefaultTheme}>
