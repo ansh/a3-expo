@@ -5,9 +5,13 @@ export type TextProps = DefaultText["props"];
 
 export function Text(props: TextProps) {
   const { style, ...otherProps } = props;
-  const { palette } = useStyles();
+  const { styles } = useStyles();
 
-  return <DefaultText style={[{ color: palette.text }, style]} {...otherProps} />;
+  return <DefaultText style={[styles.text, style]} {...otherProps} />;
 }
 
-const useStyles = createUseStyles(({ palette }) => ({}));
+const useStyles = createUseStyles(({ palette }) => ({
+  text: {
+    color: palette.text,
+  },
+}));
