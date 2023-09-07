@@ -6,8 +6,8 @@ import { Appearance, ColorSchemeName, useColorScheme as _useColorScheme } from "
 
 type TypedColorScheme = NonNullable<ColorSchemeName>;
 
-export function useColorScheme(): NonNullable<ColorSchemeName> {
-  return _useColorScheme() as NonNullable<ColorSchemeName>;
+export function useColorScheme(): TypedColorScheme {
+  return _useColorScheme() as TypedColorScheme;
 }
 
 export function setColorScheme(colorScheme: ColorSchemeName) {
