@@ -4,7 +4,7 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 
 ## Technologies used
 - Expo v49
-- React Navigation v6 (I'm looking to switch this to `expo-router` by @evanbacon when auth flows are made more stable and customizable)
+- React Navigation v6 (I'm looking to switch this to `expo-router` by @evanbacon soon)
 - Reanimated v3
 - React Native Gesture Handler v4
 - Firebase JS v9
@@ -25,9 +25,13 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
 - [ ] Firebase Auth
   - [ ] Phone Auth with country picker and detection
   - [ ] Google OAuth on iOS + Android
-  - [ ] Apple OAuth on iOS
+  - [x] Apple OAuth on iOS
 - [ ] Error handling with React Error Boundary
 - [x] Prettier setup
+- [ ] ESLint setup
+  - [ ] Auto-organize imports by type via ESLint plugin
+  - [ ] ESLint plugin for React Hooks (avoid pitfalls with useEffect etc)
+  - [ ] ESLint plugin to catch declaring a component inside a component which is the cause of a lot of re-renders (eg: in FlatList renderItem)
 
 
 ### Optional
@@ -44,8 +48,8 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
   - [ ] Simple `Box` component that is an opinionated `View` (like )
   - [ ] Simple `Text` component that is a slightly more opinionated version of `Text` from react-native
 - [ ] Simple `<Provider />` flow to easily add or remove features
-- [ ] ESLint setup
-  - [ ] Auto-organize imports by type via ESLint plugin
+- [ ] A demo of shared element transitions
+
 
 Cannot be included in the Expo Go version:
 - [ ] OTA update handler with EAS
