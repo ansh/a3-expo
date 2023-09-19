@@ -27,7 +27,7 @@ export function createUseStyles<T extends StyleSheet.NamedStyles<T> | StyleSheet
 
     const styles = useMemo(
       () => StyleSheet.create(getStyles({ palette, layout, colors, fonts, edgeInsets })),
-      [theme]
+      [theme, edgeInsets, palette]
     );
 
     return { styles, palette, layout, colors, edgeInsets, fonts };

@@ -28,9 +28,9 @@ This is an Expo app that has _my_ personal preferences expressed in it. Particul
   - [x] Apple OAuth on iOS
 - [ ] Error handling with React Error Boundary
 - [x] Prettier setup
-- [ ] ESLint setup
-  - [ ] Auto-organize imports by type via ESLint plugin
-  - [ ] ESLint plugin for React Hooks (avoid pitfalls with useEffect etc)
+- [x] ESLint setup
+  - [x] Auto-organize imports by type via ESLint plugin
+  - [x] ESLint plugin for React Hooks (avoid pitfalls with useEffect etc)
   - [ ] ESLint plugin to catch declaring a component inside a component which is the cause of a lot of re-renders (eg: in FlatList renderItem)
 
 
