@@ -1,4 +1,5 @@
 import * as Google from "expo-auth-session/providers/google";
+
 import { Text, PressableOpacity } from "../../components/base";
 import { createUseStyles } from "../../config/styles/createUseStyles";
 

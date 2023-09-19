@@ -1,5 +1,5 @@
-import { Platform } from "react-native";
 import Constants, { ExecutionEnvironment } from "expo-constants";
+import { Platform } from "react-native";
 
 // device platform
 export const isIOS = Platform.OS === "ios";

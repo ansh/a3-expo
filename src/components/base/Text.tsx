@@ -1,4 +1,5 @@
 import { Text as DefaultText } from "react-native";
+
 import { createUseStyles } from "../../config/styles/createUseStyles";
 
 export type TextProps = DefaultText["props"];

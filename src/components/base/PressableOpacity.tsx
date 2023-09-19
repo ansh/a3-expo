@@ -1,4 +1,5 @@
 import { Pressable as DefaultPressable, StyleProp, ViewStyle, PressableProps } from "react-native";
+
 import { isAndroid } from "../../lib/platform";
 
 interface Props extends PressableProps {

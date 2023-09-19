@@ -1,8 +1,9 @@
+import * as AppleAuthentication from "expo-apple-authentication";
 import { OAuthProvider, User, onAuthStateChanged, signInWithCredential } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
-import { firebaseAuth } from "../../config/firebaseConfig";
-import * as AppleAuthentication from "expo-apple-authentication";
 import { Alert } from "react-native";
+
+import { firebaseAuth } from "../../config/firebaseConfig";
 
 type AuthContextType = {
   user: User | null;

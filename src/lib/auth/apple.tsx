@@ -1,7 +1,8 @@
-import { Platform } from "react-native";
 import * as AppleAuthentication from "expo-apple-authentication";
-import { useWithColorScheme } from "../../config/styles/colorScheme";
+import { Platform } from "react-native";
+
 import { useAuth } from "./AuthProvider";
+import { useWithColorScheme } from "../../config/styles/colorScheme";
 import { isIOS } from "../platform";
 
 export async function useCheckIsAppleAuthAvailable() {

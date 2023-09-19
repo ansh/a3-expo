@@ -1,6 +1,8 @@
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+
 import {
   AuthStackParamList,
   HomeTabParamList,
@@ -8,13 +10,12 @@ import {
   RootStackParamList,
   TabStackParamList,
 } from "./types";
+import { useColorScheme } from "../config/styles/colorScheme";
+import { useAuth } from "../lib/auth/AuthProvider";
+import SignIn from "../screens/auth/SignIn";
 import Home, { HomeHeaderRight } from "../screens/home/Home";
 import Profile, { ProfileHeaderRight } from "../screens/profile/Profile";
 import Settings from "../screens/settings/Settings";
-import { useColorScheme } from "../config/styles/colorScheme";
-import SignIn from "../screens/auth/SignIn";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import { useAuth } from "../lib/auth/AuthProvider";
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();

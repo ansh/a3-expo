@@ -1,10 +1,11 @@
-import { Pressable, ScrollView, View } from "react-native";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { HomeTabParamList } from "../../navigation/types";
-import { createUseStyles } from "../../config/styles/createUseStyles";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useToggleColorScheme, useWithColorScheme } from "../../config/styles/colorScheme";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { Pressable, ScrollView, View } from "react-native";
+
 import { Text } from "../../components/base";
+import { useToggleColorScheme, useWithColorScheme } from "../../config/styles/colorScheme";
+import { createUseStyles } from "../../config/styles/createUseStyles";
+import { HomeTabParamList } from "../../navigation/types";
 
 type Props = NativeStackScreenProps<HomeTabParamList, "Home">;
 const Home = ({}: Props) => {

@@ -1,9 +1,10 @@
-import { ScrollView } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { AuthStackParamList, HomeTabParamList } from "../../navigation/types";
+import { ScrollView } from "react-native";
+
 import { createUseStyles } from "../../config/styles/createUseStyles";
 import { SignInWithAppleButton } from "../../lib/auth/apple";
 import { SignInWithGoogleButton } from "../../lib/auth/google";
+import { AuthStackParamList, HomeTabParamList } from "../../navigation/types";
 
 type Props = NativeStackScreenProps<AuthStackParamList, "SignIn">;
 const SignIn = ({}: Props) => {

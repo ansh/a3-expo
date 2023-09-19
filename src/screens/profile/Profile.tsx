@@ -1,10 +1,11 @@
-import { Pressable, View, ScrollView } from "react-native";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { ProfileTabParamList } from "../../navigation/types";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { createUseStyles } from "../../config/styles/createUseStyles";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { Pressable, View, ScrollView } from "react-native";
+
 import { Text } from "../../components/base";
+import { createUseStyles } from "../../config/styles/createUseStyles";
+import { ProfileTabParamList } from "../../navigation/types";
 
 type Props = NativeStackScreenProps<ProfileTabParamList, "Profile">;
 const Profile = ({}: Props) => {
